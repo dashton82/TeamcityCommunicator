@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace TeamCityCommunicator.Services
 {
-    public class TeamCityService : ITeamCityService, ITeamCityBaseService
+    public class TeamCityService : ITeamCityService
     {
         public string GetBuildStatus(string buildId)
         {

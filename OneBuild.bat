@@ -30,7 +30,7 @@ ECHO task = %TASK%
 ECHO configuration = %CONFIGURATION%
 ECHO buildcounter = %BUILDCOUNTER%
 
-powershell -NoProfile -ExecutionPolicy bypass -command ".\packages\invoke-build.2.9.12\tools\Invoke-Build.ps1 %TASK% -configuration %CONFIGURATION% -buildCounter %BUILDCOUNTER% .\OneBuild.build.ps1"
+powershell -NoProfile -ExecutionPolicy bypass -command ".\packages\invoke-build.2.9.13\tools\Invoke-Build.ps1 %TASK% -configuration %CONFIGURATION% -buildCounter %BUILDCOUNTER% .\OneBuild.build.ps1"
 
 IF %ERRORLEVEL% == 0 GOTO OK
 ECHO ##teamcity[buildStatus status='FAILURE' text='{build.status.text} in execution']

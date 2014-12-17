@@ -5,7 +5,7 @@ using System.Web;
 
 namespace TeamCityCommunicator.Services
 {
-    public class BuildStatusDataStorageService : IBuildStatusDataStorageService, ITeamCityBaseService
+    public class BuildStatusDataStorageService : IBuildStatusDataStorageService
     {
         public Boolean StoreSanityBuildInformation(string buildNumber, string status)
         {

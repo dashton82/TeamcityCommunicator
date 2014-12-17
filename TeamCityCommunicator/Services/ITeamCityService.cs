@@ -1,6 +1,6 @@
 ﻿namespace TeamCityCommunicator.Services
 {
-    public interface ITeamCityService
+    public interface ITeamCityService : ITeamCityBaseService
     {
         string GetBuildStatus(string buildId);
     }

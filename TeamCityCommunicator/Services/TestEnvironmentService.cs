@@ -3,7 +3,7 @@ using System.Net;
 
 namespace TeamCityCommunicator.Services
 {
-    public class TestEnvironmentService : ITestEnvironmentService, ITeamCityBaseService
+    public class TestEnvironmentService : ITestEnvironmentService
     {
         public string GetBuildVersion(string environmentNumber)
         {

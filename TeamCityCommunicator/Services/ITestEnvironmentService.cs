@@ -1,6 +1,6 @@
 ﻿namespace TeamCityCommunicator.Services
 {
-    public interface ITestEnvironmentService
+    public interface ITestEnvironmentService : ITeamCityBaseService
     {
         string GetBuildVersion(string environmentNumber);
     }
