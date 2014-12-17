@@ -1,0 +1,11 @@
+TeamCityCommunicator/obj/Debug/*.*
+TeamCityCommunicator.nUnitTests/bin/*.*
+TeamCityCommunicator.nUnitTests/obj/Debug/*.*
+TeamCityCommunicator.nUnitTests/obj/Release/*.*
+*.sln.DotSettings.user
+*.v12.suo
+TeamCityCommunicator/*.*.user
+packages
+TeamCityCommunicator.nUnitTests/TeamCityCommunicator.nUnitTests.csproj
+TeamCityCommunicator.nUnitTests/TeamCityCommunicator.nUnitTests.csproj.user
+TeamCityCommunicator/bin/
