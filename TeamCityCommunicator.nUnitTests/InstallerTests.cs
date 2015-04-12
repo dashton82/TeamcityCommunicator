@@ -5,6 +5,7 @@ using Castle.Core.Internal;
 using Castle.MicroKernel;
 using Castle.Windsor;
 using NUnit.Framework;
+using TeamCityCommunicator.Common.Helpers;
 using TeamCityCommunicator.Controllers;
 using TeamCityCommunicator.Installers;
 using TeamCityCommunicator.Services;
@@ -16,12 +17,14 @@ namespace TeamCityCommunicator.nUnitTests
     {
         private IWindsorContainer _containerWithControllers;
         private IWindsorContainer _containerWithServices;
+        private IWindsorContainer _containerWithHelpers;
 
         [SetUp]
         public void Arrange()
         {
             _containerWithControllers = new WindsorContainer().Install(new WebApiInstaller());
             _containerWithServices = new WindsorContainer().Install(new ServicesInstaller());
+            _containerWithHelpers = new WindsorContainer().Install(new HelpersInstaller());
         }
 
         [Test]
@@ -59,6 +62,15 @@ namespace TeamCityCommunicator.nUnitTests
             var registeredServices = GetImplementationTypesFor(typeof(ITeamCityBaseService), _containerWithServices);
 
             Assert.AreEqual(allServices, registeredServices);
+        }
+
+        [Test]
+        public void All_Helpers_Are_Registered_In_The_Container()
+        {
+            var allHelpers = GetPublicClassesFromApplicationAssembly(c => c.Is<ITeamCityBaseHelper>());
+            var registeredHelpers = GetImplementationTypesFor(typeof (ITeamCityBaseHelper), _containerWithHelpers);
+
+            Assert.AreEqual(allHelpers,registeredHelpers);
         }
         
         private IHandler[] GetAllHanders(IWindsorContainer container)
