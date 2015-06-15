@@ -12,3 +12,6 @@ TeamCityCommunicator/bin/
 TestResult_nunit_1.xml
 VersionNumber.xml
 HipChatCloudService/csx/*.*
+TeamCityCommunicator/obj/*.*
+HipChatCloudService/bin/*.*
+*.user
