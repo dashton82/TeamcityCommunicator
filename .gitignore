@@ -11,3 +11,4 @@ TeamCityCommunicator.nUnitTests/TeamCityCommunicator.nUnitTests.csproj.user
 TeamCityCommunicator/bin/
 TestResult_nunit_1.xml
 VersionNumber.xml
+HipChatCloudService/csx/*.*
